@@ -1,0 +1,1 @@
+New-AzResourceGroupDeployment -templateuri https://github.com/speedglide/devopsdemo/blob/dev/template.json -templateparameterfile https://github.com/speedglide/devopsdemo/blob/dev/parameters.json 
