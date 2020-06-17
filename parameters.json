@@ -103,7 +103,7 @@
             "value": "AzureUser"
         },
         "adminPassword": {
-            "value": null
+            "value": "SpringhouseDevOps2020"
         },
         "diagnosticsStorageAccountName": {
             "value": "devopsdemodiag111"
