@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MSDN Platforms(1)(45ef3d11-7684-484d-8cc6-80df6d71edbc)'
+    subscriptionId: '45ef3d11-7684-484d-8cc6-80df6d71edbc'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'DevOpsDemo'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/speedglide/devopsdemo/blob/master/template.json'
+    csmParametersFileLink: 'https://github.com/speedglide/devopsdemo/blob/master/parameters.json'
+    deploymentMode: 'Complete'
