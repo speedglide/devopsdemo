@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'DevOpsDemo'
     location: 'East US'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/speedglide/devopsdemo/blob/master/template.json'
-    csmParametersFileLink: 'https://github.com/speedglide/devopsdemo/blob/master/parameters.json'
+    csmFileLink: 'https://raw.githubusercontent.com/speedglide/devopsdemo/master/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/speedglide/devopsdemo/master/parameters.json'
     deploymentMode: 'Complete'
