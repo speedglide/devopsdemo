@@ -22,10 +22,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MSDN Platforms(45ef3d11-7684-484d-8cc6-80df6d71edbc)'
+    subscriptionId: '45ef3d11-7684-484d-8cc6-80df6d71edbc'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'DevOps.springhouse.com'
+    location: 'East US'
+    templateLocation: 'Linked artifact'
+    deploymentMode: 'Incremental'
