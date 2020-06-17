@@ -17,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'MSDN Platforms(45ef3d11-7684-484d-8cc6-80df6d71edbc)'
+    scriptType: 'pscore'
+    scriptLocation: 'scriptPath'
+    scriptPath: 'https://github.com/speedglide/devopsdemo/blob/master/DeployResourceGroups.ps1'
+
+  
